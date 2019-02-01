@@ -27,7 +27,8 @@ public class recursion{
     //starting recursion from the base cases to get to the nth term
     return fibH(n,0,1);
   }
-
+  
+  //m is Fib(n - 2) and o is Fib(n - 1) for the next term
   private static int fibH(int n, int m, int o){
     //base case
     if (n == 0) {
@@ -38,7 +39,7 @@ public class recursion{
     if (n == 1) {
       return o;
     }
-    //m is Fib(n - 2) and o is Fib(n - 1), therefore m + o would be Fib(n), n is counting down to reach the nth term
+    //to generate next term, swap Fib(n-2) with Fib(n-1) and Fib(n-1) with Fib(n-2) + Fib(n-1), therefore m + o would be Fib(n), do this for n-1 times
     return fibH(n-1, o, m + o);
   }
 
