@@ -5,6 +5,7 @@ public class recursion{
 
     */
   public static double sqrt(double n, double tolerance){
+    if (n == 0) return n;
     return sqrtH(n, n, tolerance);
   }
 
@@ -30,5 +31,6 @@ public class recursion{
   public static void main(String[] args) {
     System.out.println(sqrt(10,.00001));
     System.out.println(sqrt(100,.00001));
+    System.out.println(sqrt(0, 00001));
   }
 }
