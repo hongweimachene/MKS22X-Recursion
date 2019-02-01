@@ -16,14 +16,18 @@ public class recursion{
       return sqrtH((orig / guess + guess) / 2, orig, tolerance);
     }
   }
-  // /*Recursively find the n'th fibbonaci number in linear time
-  //    *fib(0) = 1; fib(1) = 1; fib(5) = 5
-  //    *precondition: n is non-negative
-  //    */
-  // public static int fib(int n){
-  //
-  // }
-  //
+  /*Recursively find the n'th fibbonaci number in linear time
+     *fib(0) = 1; fib(1) = 1; fib(5) = 5
+     *precondition: n is non-negative
+     */
+  public static int fib(int n){
+    
+  }
+
+  private static int fibH(int n, int partial){
+
+  }
+
   // /*As Per classwork*/
   // public static ArrayList<Integer> makeAllSums(){
   //
