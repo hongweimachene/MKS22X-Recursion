@@ -5,28 +5,30 @@ public class recursion{
 
     */
   public static double sqrt(double n, double tolerance){
-    double guess = n / 2;
-    return sqrtH(guess, n);
+    return sqrtH(n, n, tolerance);
   }
 
   private static double sqrtH(double guess, double orig, double tolerance){
-    if ((!(guess * guess < (1+tolerance) * orig)){
-      return sqrt(orig / guess + guess) / 2, orig);
+    if (!(guess * guess < (1+tolerance) * orig)){
+      return sqrtH((orig / guess + guess) / 2, orig, tolerance);
     } else {
       return guess;
     }
   }
-  /*Recursively find the n'th fibbonaci number in linear time
-     *fib(0) = 1; fib(1) = 1; fib(5) = 5
-     *precondition: n is non-negative
-     */
-  public static int fib(int n){
-
+  // /*Recursively find the n'th fibbonaci number in linear time
+  //    *fib(0) = 1; fib(1) = 1; fib(5) = 5
+  //    *precondition: n is non-negative
+  //    */
+  // public static int fib(int n){
+  //
+  // }
+  //
+  // /*As Per classwork*/
+  // public static ArrayList<Integer> makeAllSums(){
+  //
+  // }
+  public static void main(String[] args) {
+    System.out.println(sqrt(10,.00001));
+    System.out.println(sqrt(100,.00001));
   }
-
-  /*As Per classwork*/
-  public static ArrayList<Integer> makeAllSums(){
-
-  }
-
 }
