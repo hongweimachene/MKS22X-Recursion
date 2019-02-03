@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class recursion{
   /*Recursively find the sqrt using Newton's approximation
      *tolerance is the allowed percent error the squared answer is away from n.
@@ -45,13 +46,28 @@ public class recursion{
 
   /*As Per classwork*/
   public static ArrayList<Integer> makeAllSums(int n){
-
-
+    ArrayList<Integer> f = new ArrayList<Integer>();
+    //helper method modifies the list
+    makeAllSumsH(n, f, 0);
+    return f;
   }
 
-  private static ArrayList<Integer> makeAllSumsH(int n, Arraylist<Integer> f){
-
+  private static boolean makeAllSumsH(int n, ArrayList<Integer> f, int sum){
+    //base case once the number counts down to 0 you return the sum
+    if (n == 0) {
+      //to prevent duplicate sums
+      if (!(f.contains(sum))){
+        f.add(sum);
+      }
+      return true;
+    }
+    //recursive call when the number is still counting down to 0
+    if (n > 0) {
+      return makeAllSumsH(n-1, f, sum+n) && makeAllSumsH(n-1, f, sum);
+    }
+    return false;
   }
+
   public static void main(String[] args) {
     System.out.println(sqrt(10,.00001));
     System.out.println(sqrt(100,.00001));
@@ -62,5 +78,7 @@ public class recursion{
     System.out.println(fib(6));
     System.out.println(fib(4));
     System.out.println(fib(0));
+    System.out.println(makeAllSums(3));
+    System.out.println(makeAllSums(4));
   }
 }
