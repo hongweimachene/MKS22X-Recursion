@@ -63,6 +63,7 @@ public class recursion{
     }
     //recursive call when the number is still counting down to 0
     if (n > 0) {
+      //used && operator since you want both values, it will short circuit with ||
       return makeAllSumsH(n-1, f, sum+n) && makeAllSumsH(n-1, f, sum);
     }
     return false;
@@ -80,5 +81,6 @@ public class recursion{
     System.out.println(fib(0));
     System.out.println(makeAllSums(3));
     System.out.println(makeAllSums(4));
+    System.out.println(makeAllSums(5));
   }
 }
