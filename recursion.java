@@ -27,7 +27,7 @@ public class recursion{
     //starting recursion from the base cases to get to the nth term
     return fibH(n,0,1);
   }
-  
+
   //m is Fib(n - 2) and o is Fib(n - 1) for the next term
   private static int fibH(int n, int m, int o){
     //base case
@@ -43,10 +43,15 @@ public class recursion{
     return fibH(n-1, o, m + o);
   }
 
-  // /*As Per classwork*/
-  // public static ArrayList<Integer> makeAllSums(){
-  //
-  // }
+  /*As Per classwork*/
+  public static ArrayList<Integer> makeAllSums(int n){
+
+
+  }
+
+  private static ArrayList<Integer> makeAllSumsH(int n, Arraylist<Integer> f){
+
+  }
   public static void main(String[] args) {
     System.out.println(sqrt(10,.00001));
     System.out.println(sqrt(100,.00001));
