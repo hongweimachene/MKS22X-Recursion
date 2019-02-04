@@ -56,9 +56,9 @@ public class recursion{
     //base case once the number counts down to 0 you return the sum
     if (n == 0) {
       //to prevent duplicate sums
-      if (!(f.contains(sum))){
+      //if (!(f.contains(sum))){
         f.add(sum);
-      }
+      //}
       return true;
     }
     //recursive call when the number is still counting down to 0
